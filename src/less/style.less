@@ -14,20 +14,17 @@ h1 {
     font-weight: bold;
     font-size: 64px;
     line-height: 77px;
-    color: @color;
     letter-spacing: 0.4px;
 }
 
 h2 {
     font-size: 32px;
     line-height: 32px;
-    color: @color;
 }
 
 h3 {
     font-size: 28px;
     line-height: 36px;
-    color: @color;
 }
 
 .container {
@@ -35,9 +32,8 @@ h3 {
 }
 
 .header {
-    padding-top: 20px;
+    padding-top: 21px;
     padding-bottom: 243px;
-    background-attachment: fixed;
     background-image: url("../images/headerbg.jpg");
     background-size: cover;
 
@@ -73,7 +69,7 @@ h3 {
             text-transform: uppercase;
             color: #111111;
             font-size: 16px;
-            padding: 13px 17px;
+            padding: 13px 21px;
             border-radius: 5px;
         }
 
@@ -88,14 +84,14 @@ h3 {
 
     &__title {
         margin-bottom: 46px;
-        .shift-left(1);
+        .shift-left(.6);
     }
 
     &__text {
         font-size: 24px;
         line-height: 35px;
         margin-bottom: 47px;
-        .shift-left(1);
+        .shift-left(.6);
     }
 
     &-btn {
@@ -106,6 +102,55 @@ h3 {
         font-size: 16px;
         padding: 24px 32px;
         border-radius: 5px;
-        .shift-left(1);
+        .shift-left(.6);
     }
 }
+
+.desc {
+    background: #2D404C;
+    padding-top: 65px;
+    padding-bottom: 53px;
+
+    .container { 
+        display: flex;
+    }
+
+    &-main {
+        .col();
+        .shift-left(.6);
+        .size(7.5);
+
+        &__title {
+            margin-bottom: 48px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 30px;
+            white-space: pre-line
+        }
+    }
+
+    &-footer {
+        .col();
+        .size(3.1);
+
+        img {
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            margin-bottom: 9px;
+            font-size: 16px;
+            line-height: 26px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.degub-grid{
+    .debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
+ }
