@@ -23,7 +23,7 @@ function css() {
 			.pipe(preproc())
 			.pipe(gcmq())
 			.pipe(autoprefixer({
-					browsers: ['last 3 versions'],
+					overrideBrowserslist: ['last 2 versions'],
 					cascade: false
 				}))
 			.pipe(CleanCSS({
