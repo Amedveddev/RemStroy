@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const gcmq = require('gulp-group-css-media-queries');
 const preproc = require('gulp-less');
+
 const config = {
 	src: './src',
 	css: {
@@ -41,7 +42,7 @@ function watch() {
 	browserSync.init({
         server: {
             baseDir: "./"
-        }
+		}
     });
 	gulp.watch(config.src + config.css.watch, css);
 	gulp.watch("./*.html").on('change', browserSync.reload);
