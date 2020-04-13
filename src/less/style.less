@@ -205,6 +205,32 @@ h3 {
     }
 }
 
+.advant {
+    padding-top: 62px;
+    padding-bottom: 69px;
+    background-color: #2D404C;
+
+    &__title {
+        .shift-left(0.6);
+        margin-bottom: 50px;
+    }
+
+    &-items {
+        .row-flex();
+        justify-content: space-around;
+        align-items: baseline;
+
+        &-item {
+            .col();
+            text-align: center;
+            .size(2.1);
+            min-height: 218px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 .degub-grid{
     .debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
  }
