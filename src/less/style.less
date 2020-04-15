@@ -291,6 +291,7 @@ h3 {
     &-slider {
         display: flex;
         position: relative;
+        flex-wrap: wrap;
 
         img {
             .shift-left(0.55);
@@ -646,3 +647,248 @@ h3 {
 .degub-grid{
     .debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
  }
+
+ .header-top-burger {
+    width: 31px;
+    height: 31px;
+    border-radius: 1px;
+    position: relative;
+
+    &__item {
+        position: absolute;
+        width: 31px;
+        height: 3px;
+        background: #ECF0F1;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(1) {
+            top: 50%;
+            margin-top: -1.5px;
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+ }
+
+ @media screen and (max-width: 1157px) {
+     .header-top-nav {
+         display: none;
+     }
+
+     .header-top-burger {
+         display: block;
+     }
+     .header-top {
+         justify-content: center;
+
+         &-logo,
+         &-burger {
+            margin-right: 40px;
+         }
+     }
+     
+     .portfolio-nav {
+         display: none;
+     }
+
+     .portfolio-slider {
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+
+         img {
+             .size(6);
+             margin: 0;
+         }
+
+         .one,
+         .two {
+             display: none;
+         }
+     }
+
+     .portfolio-slider-main {
+         .size(12);
+
+         &__adres {
+             margin-bottom: 35px;
+         }
+     }
+
+     .portfolio-slider-nav {
+         position: relative;
+         margin-right: 0;
+         width: 100%;
+     }
+
+     .portfolio-slider-nav ul {
+         justify-content: space-between;
+
+         a {
+             margin: 0;
+         }
+     }
+ }
+
+ @media screen and (max-width: 864px) {
+    h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .desc .container {
+        flex-wrap: wrap;
+    }
+    .desc-main {
+        .size(12);
+    }
+
+    .desc-footer {
+        .size(12);
+    }
+
+    .service-items-item:first-child {
+        .size(12);
+    }
+
+    .service-items-item {
+        .size(12);
+        background-position: center;
+        background-size: cover;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .scheme-timeline-article {
+        .size(12);
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .header {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .header {
+        padding-top: 0;
+    }
+    .header-top {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        justify-content: space-around;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 110%;
+            background: #2D404C;
+            height: 55px;
+        }
+
+        &-logo {
+            display: none;
+        }
+
+        &-burger {
+            margin: 0;
+            order: -1;
+            position: relative;
+            z-index: 11;
+        }
+
+        &-call {
+            display: block;
+            position: relative;
+            z-index: 11;
+        }
+
+        button {
+            position: relative;
+            z-index: 11;
+        }
+    }
+
+    .advant__title {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .advant-items-item {
+        .size(12);
+        
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .header {
+        padding-bottom: 67px;
+
+        &-btn {
+            padding: 24px 10px;
+        }
+    }
+
+    h1 {
+        font-size: 27px;
+        line-height: 37px;
+    }
+
+    h2 {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    .desc-main__text {
+        font-size: 18px;
+        line-height: 30px;
+        white-space: pre-line;
+    }
+
+    .portfolio-slider {
+        img {
+            .size(12);
+        }
+    }
+}
+
+@media screen and (max-width: 932px) {
+    .footer-nav,
+    .footer-contact,
+    .footer-social {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-btn {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-contact {
+        input,
+        a {
+            margin-bottom: 20px;
+        }
+    }
+}
+
